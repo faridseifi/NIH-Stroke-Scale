@@ -1,0 +1,294 @@
+{
+  "@context": [
+    "https://kgrid.org/koio/2.1/context",
+    {
+      "fno": "https://w3id.org/function/ontology#",
+      "xsd": "https://www.w3.org/2001/XMLSchema#",
+      "owl": "http://www.w3.org/2002/07/owl#"
+    }
+  ],
+  "@id": "nihss",
+  "koio:KOIOVersion": "2.1",
+  "@type": "koio:KnowledgeObject",
+  "dc:identifier": "ark:nihss",
+  "dc:version": "v1.0",
+  "dc:title": "NIH Stroke Scale",
+  "dc:description": "Uses the patient's presenting symptoms and signs to quantify the severity of a suspected stroke.",
+  "dc:contributors": "Kgrid Team",
+  "dc:keywords": [
+    "stroke",
+    "cerebrovascular accident",
+    "CVA",
+    "cerebral ischemia",
+    "focal neurologic deficit"
+  ],
+  "koio:hasKnowledge": {
+    "@id": "NIHStrokeScale",
+    "@type": [
+      "koio:Knowledge",
+      "fno:Function"
+    ],
+    "dc:Source": "https://pubmed.ncbi.nlm.nih.gov/7974549/",
+    "schema:creator": {
+      "@type": "schema:Person",
+      "schema:name": "Dr. Patrick D. Lyden"
+    },
+    "fno:expects": [
+      {
+        "@id": "consciousness",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "ALERT_KEENLY_RESPONSIVE",
+          "AROUSES_TO_MINOR_STIMULATION",
+          "REQUIRES_REPEATED_STIMULATION_TO_AROUSE",
+          "MOVEMENTS_TO_PAIN",
+          "POSTURES_OR_UNRESPONSIVE"
+        ],
+        "dc:description": "The patient's response to being asked for their age and the month of the year.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "month_and_age_questions",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "BOTH_QUESTIONS_RIGHT",
+          "ONE_QUESTION_RIGHT",
+          "ZERO_QUESTIONS_RIGHT",
+          "DYSARTHRIC_INTUBATED_TRAUMA_OR_LANGUAGE_BARRIER",
+          "APHASIC"
+        ],
+        "dc:description": "The patient's response to being asked for their age and the month of the year.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "blink_eyes_and_squeeze_hands",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "PERFORMS_BOTH_TASKS",
+          "PERFORMS_ONE_TASK",
+          "PERFORMS_ZERO_TASKS"
+        ],
+        "dc:description": "The patient's response to being asked to blink their eyes and squeeze the examiner's hand. Can be pantomimed if patient does not understand.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "horizontal_extraocular_movements",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NORMAL",
+          "PARTIAL_GAZE_PALSY_CAN_BE_OVERCOME",
+          "PARTIAL_GAZE_PALSY_CORRECTS_WITH_OCULOCEPHALIC_REFLEX",
+          "FORCED_GAZE_PALSY_CANNOT_BE_OVERCOME"
+        ],
+        "dc:description": "The patient's ability to perform horizontal extraocular movements. (i.e. look left and right with both eyes)",
+        "fno:required": "true"
+      },
+      {
+        "@id": "visual_fields",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_VISUAL_LOSS",
+          "PARTIAL_HEMIANOPIA",
+          "COMPLETE_HEMIANOPIA",
+          "PATIENT_IS_BILATERALLY_BLIND",
+          "BILATERAL_HEMIANOPIA"
+        ],
+        "dc:description": "The integrity of the patient's visual fields.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "facial_palsy",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NORMAL_SYMMETRY",
+          "MINOR_PARALYSIS",
+          "PARTIAL_PARALYSIS",
+          "UNILATERAL_COMPLETE_PARALYSIS",
+          "BILATERAL_COMPLETE_PARALYSIS"
+        ],
+        "dc:description": "The ability of the patient to engage their facial muscles.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "left_arm_motor_drift",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_DRIFT_FOR_10_SECONDS",
+          "DRIFTS_BUT_DOES_NOT_HIT_BED",
+          "DRIFTS_HITS_BED",
+          "SOME_EFFORT_AGAINST_GRAVITY",
+          "NO_EFFORT_AGAINST_GRAVITY",
+          "NO_MOVEMENT",
+          "AMPUTATION_JOINT_FUSION"
+        ],
+        "dc:description": "The patient's ability to overcome gravity with their left arm and hold a position without drifting.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "right_arm_motor_drift",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_DRIFT_FOR_10_SECONDS",
+          "DRIFTS_BUT_DOES_NOT_HIT_BED",
+          "DRIFTS_HITS_BED",
+          "SOME_EFFORT_AGAINST_GRAVITY",
+          "NO_EFFORT_AGAINST_GRAVITY",
+          "NO_MOVEMENT",
+          "AMPUTATION_JOINT_FUSION"
+        ],
+        "dc:description": "The patient's ability to overcome gravity with their right arm and hold a position without drifting.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "left_leg_motor_drift",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_DRIFT_FOR_5_SECONDS",
+          "DRIFTS_BUT_DOES_NOT_HIT_BED",
+          "DRIFTS_HITS_BED",
+          "SOME_EFFORT_AGAINST_GRAVITY",
+          "NO_EFFORT_AGAINST_GRAVITY",
+          "NO_MOVEMENT",
+          "AMPUTATION_JOINT_FUSION"
+        ],
+        "dc:description": "The patient's ability to overcome gravity with their left leg and hold a position without drifting.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "right_leg_motor_drift",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_DRIFT_FOR_5_SECONDS",
+          "DRIFTS_BUT_DOES_NOT_HIT_BED",
+          "DRIFTS_HITS_BED",
+          "SOME_EFFORT_AGAINST_GRAVITY",
+          "NO_EFFORT_AGAINST_GRAVITY",
+          "NO_MOVEMENT",
+          "AMPUTATION_JOINT_FUSION"
+        ],
+        "dc:description": "The patient's ability to overcome gravity with their right leg and hold a position without drifting.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "limb_ataxia",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_ATAXIA",
+          "ATAXIA_IN_1_LIMB",
+          "ATAXIA_IN_2_LIMBS",
+          "DOES_NOT_UNDERSTAND",
+          "PARALYZED",
+          "AMPUTATION_JOINT_FUSION"
+        ],
+        "dc:description": "The patient's ability to coordinate their limbs.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "sensation",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NORMAL_NO_SENSORY_LOSS",
+          "MILD_MODERATE_LOSS_LESS_SHARP_MORE_DULL",
+          "MILD_MODERATE_LOSS_CAN_SENSE_BEING_TOUCHED",
+          "COMPLETE_LOSS_CANNOT_SENSE_BEING_TOUCHED_AT_ALL",
+          "NO_RESPONSE_AND_QUADRIPLEGIC",
+          "COMA_UNRESPONSIVE"
+        ],
+        "dc:description": "The patients's ability to sense touch.",
+        "fno:required": "true"
+      },
+      {
+        "@id": "language",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NORMAL_NO_APHASIA",
+          "MILD_MODERATE_APHASIA_SOME_OBVIOUS_CHAGNES_WITHOUT_SIGNIFICANT_LIMITATION",
+          "SEVERE_APHASIA_FRAGMENTARY_EXPRESSION_INFERENCE_NEEDED_CANNOT_IDENTIFY_MATERIALS",
+          "MUTE_GLOBAL_APHASIA_NO_USABLE_SPEECH_AUDITORY_COMPREHENSION",
+          "COMA_UNRESPONSIVE"
+        ],
+        "dc:description": "The patient's ability to understand and construct language or lack thereof (i.e. aphasia).",
+        "fno:required": "true"
+      },
+      {
+        "@id": "dysarthria",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NORMAL",
+          "MILD_MODERATE_DYSARTHRIA_SLURRING_BUT_CAN_BE_UNDERSTOOD",
+          "SEVERE_DYSARTHRIA_UNINTELLIGIBLE_SLURRING_OR_OUT_OF_PROPORTION_TO_DYSPHAGIA",
+          "MUTE_ANARTHRIC",
+          "INTUBATED_UNABLE_TO_TEST"
+        ],
+        "dc:description": "The patient's ability to produce the sounds of language or lack thereof (i.e. dysarthria).",
+        "fno:required": "true"
+      },
+      {
+        "@id": "inattention",
+        "@type": [
+          "fno:Parameter",
+          "xsd:string"
+        ],
+        "owl:oneOf": [
+          "NO_ABNORMALITY",
+          "VISUAL_TACTILE_AUDITORY_SPATIAL_PERSONAL_INATTENTION",
+          "EXTINCTION_TO_BILATERAL_SIMULTANEOUS_STIMULATION",
+          "PROFOUND_HEMI_INATTENTION",
+          "EXTINCTION_TO_GREATER_THAN_1_MODALITY"
+        ],
+        "dc:description": "The patient's ability to maintain attention or lack thereof.",
+        "fno:required": "true"
+      }
+    ],
+    "koio:implementedBy": {
+      "@id": "https://raw.githubusercontent.com/kgrid-lab/LLM_with_RAG_chatbot/main/KO/clinical_calculators/code/nihss.py",
+      "@type": [
+        "koio:Implementation",
+        "Function",
+        "Python"
+      ]
+    }
+  }
+}
