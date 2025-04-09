@@ -283,7 +283,7 @@
       }
     ],
     "implementedBy": {
-      "@id": "https://raw.githubusercontent.com/kgrid-lab/LLM_with_RAG_chatbot/main/KO/clinical_calculators/code/nihss.py",
+      "@id": "https://raw.githubusercontent.com/faridseifi/NIH-Stroke-Scale/refs/heads/main/nihss.py",
       "@type": [
         "Implementation",
         "Function",
