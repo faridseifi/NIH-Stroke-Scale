@@ -8,8 +8,8 @@
     }
   ],
   "@id": "nihss",
-  "koio:KOIOVersion": "2.1",
-  "@type": "koio:KnowledgeObject",
+  "KOIOVersion": "2.1",
+  "@type": "KnowledgeObject",
   "dc:identifier": "ark:nihss",
   "dc:version": "v1.0",
   "dc:title": "NIH Stroke Scale",
@@ -22,10 +22,10 @@
     "cerebral ischemia",
     "focal neurologic deficit"
   ],
-  "koio:hasKnowledge": {
+  "hasKnowledge": {
     "@id": "NIHStrokeScale",
     "@type": [
-      "koio:Knowledge",
+      "Knowledge",
       "fno:Function"
     ],
     "dc:Source": "https://pubmed.ncbi.nlm.nih.gov/7974549/",
@@ -282,10 +282,10 @@
         "fno:required": "true"
       }
     ],
-    "koio:implementedBy": {
+    "implementedBy": {
       "@id": "https://raw.githubusercontent.com/kgrid-lab/LLM_with_RAG_chatbot/main/KO/clinical_calculators/code/nihss.py",
       "@type": [
-        "koio:Implementation",
+        "Implementation",
         "Function",
         "Python"
       ]
